@@ -1,0 +1,142 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+
+    .header-top {
+        background: #002a5c;
+        color: white;
+        padding: 20px 0;
+        border-bottom: 3px solid #ffd700;
+    }
+
+    .header-top h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 0 15px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo-class {
+        width: 120px;
+        height: 60px;
+        background: url('logo.png') no-repeat center;
+        background-size: contain;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-menu .list-link {
+        color: #ffd700;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .nav-page {
+        display: flex;
+        gap: 25px;
+        list-style: none;
+    }
+
+    .nav-page li {
+        cursor: pointer;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .nav-page li:hover {
+        color: #ffd700;
+    }
+
+    .main-section {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    h2 {
+        color: #002a5c;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        color: #333;
+        margin: 15px 0;
+        font-size: 1.3rem;
+    }
+
+    p {
+        line-height: 1.6;
+        margin: 15px 0;
+        color: #444;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        background: #f8f9fa;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+        border: 1px solid #dee2e6;
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background: #002a5c;
+        color: white;
+        width: 30%;
+    }
+
+
+    table a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+
+    table a:hover {
+        text-decoration: underline;
+    }
+
+
+
+    @media (max-width: 768px) {
+        .header-nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-page {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        table {
+            font-size: 0.9rem;
+        }
+    }
