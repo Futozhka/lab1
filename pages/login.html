@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація студента</title>
+    <style>
+        .form-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <!-- Персональні дані -->
+        <div class="form-section">
+            <h2>Персональні дані</h2>
+            
+            <label>Прізвище:
+                <input type="text" name="surname" required>
+            </label>
+            
+            <label>Ім'я:
+                <input type="text" name="name" required>
+            </label>
+            
+            <label>По батькові:
+                <input type="text" name="patronymic">
+            </label>
+            
+            <label>Електронна пошта:
+                <input type="email" name="email" 
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                       required>
+            </label>
+            
+            <label>Пароль (мінімум 8 символів):
+                <input type="password" name="password" minlength="8" required>
+            </label>
+            
+            <label>Підтвердження пароля:
+                <input type="password" name="confirm_password" required>
+            </label>
+        </div>
+
+        <!-- Додаткова інформація -->
+        <div class="form-section">
+            <h2>Додаткова інформація</h2>
+            
+            <label>Дата народження:
+                <input type="date" name="birthdate">
+            </label>
+            
+            <fieldset>
+                <legend>Стать:</legend>
+                <label>
+                    <input type="radio" name="gender" value="male" required> Чоловіча
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female"> Жіноча
+                </label>
+            </fieldset>
+            
+            <label>Факультет:
+                <select name="faculty">
+                    <option value="IKM">Інженерія кібермедіа</option>
+                    <option value="CS">Комп'ютерні науки</option>
+                    <option value="EE">Електротехніка</option>
+                </select>
+            </label>
+            
+            <fieldset>
+                <legend>Курс навчання:</legend>
+                <label><input type="radio" name="course" value="1" required> 1</label>
+                <label><input type="radio" name="course" value="2"> 2</label>
+                <label><input type="radio" name="course" value="3"> 3</label>
+                <label><input type="radio" name="course" value="4"> 4</label>
+            </fieldset>
+            
+            <label>Додаткова інформація:
+                <textarea name="info" rows="4"></textarea>
+            </label>
+            
+            <label>
+                <input type="checkbox" name="agreement" required> 
+                Я погоджуюсь на обробку персональних даних
+            </label>
+        </div>
+
+        <input type="submit" value="Зареєструватися">
+    </form>
+</body>
+</html>
